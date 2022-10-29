@@ -41,7 +41,6 @@ jobs:
         run: |
          cd /tmp/clickable_base; \
           clickable build
-          - name: Upload .click package for armhf
     - name: Upload .click package for arm64
       uses: actions/upload-artifact@v3.1.1
       with:
