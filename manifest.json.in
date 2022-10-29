@@ -1,0 +1,15 @@
+{
+    "name": "ut-app-github-action.aidgamesa",
+    "description": "example of ubuntu touch autobuild use github actions",
+    "architecture": "@CLICK_ARCH@",
+    "title": "ut app github action",
+    "hooks": {
+        "ut-app-github-action": {
+            "apparmor": "ut-app-github-action.apparmor",
+            "desktop":  "ut-app-github-action.desktop"
+        }
+    },
+    "version": "@BUILD_VERSION@",
+    "maintainer": "aidgamesa <email@domain.org>",
+    "framework" : "@CLICK_FRAMEWORK@"
+}
