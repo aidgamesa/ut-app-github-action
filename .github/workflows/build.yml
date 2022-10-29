@@ -20,13 +20,13 @@ jobs:
         image: clickable/ci-16.04-armhf
         options: -v ${{ github.workspace }}:/tmp/clickable_base
         run: |
+          cd /tmp/clickable_base; \
           clickable build
-          cp build/*/app/*.click /tmp/clickable_base
     - name: Upload .click package for armhf
       uses: actions/upload-artifact@v3.1.1
       with:
         path: |
-          *.click
+          build/*/app/*.click
   
   build-arm64:
     name: Build .click package for arm64
@@ -39,11 +39,11 @@ jobs:
         image: clickable/ci-16.04-arm64
         options: -v ${{ github.workspace }}:/tmp/clickable_base
         run: |
+         cd /tmp/clickable_base; \
           clickable build
-          cp build/*/app/*.click /tmp/clickable_base
           - name: Upload .click package for armhf
     - name: Upload .click package for arm64
       uses: actions/upload-artifact@v3.1.1
       with:
         path: |
-          *.click
+          build/*/app/*.click
